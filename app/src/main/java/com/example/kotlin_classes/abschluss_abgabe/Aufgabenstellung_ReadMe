@@ -1,0 +1,55 @@
+1. Data Class für Bücher
+
+    ->Erstelle eine Data Class Book mit den folgenden Eigenschaften:
+        title: String,
+        author: String,
+        genre: Genre,
+        status: BookStatus,
+
+2. Enum Class für Genre
+
+    Definiere eine Enum Class Genre mit den folgenden Werten:
+        FICTION
+        NON_FICTION
+        SCIENCE
+        HISTORY
+        CHILDREN
+    Füge jedem Genre eine kurze Beschreibung hinzu. Zum Beispiel:
+        FICTION = "Fictional stories and novels"
+        etc.
+
+    Implementiere eine Methode printDescription() in der Enum Class, die die Beschreibung des Genres ausgibt.
+
+3. Sealed Class für Buchstatus
+
+    Erstelle eine Sealed Class BookStatus, die den aktuellen Status eines Buches beschreibt:
+        Available: Das Buch ist verfügbar.
+        CheckedOut(val dueDate: String): Das Buch ist ausgeliehen, mit einem Rückgabedatum.
+        Reserved(val reservedBy: String): Das Buch ist reserviert und zeigt an, von wem.
+    Implementiere eine Methode in BookStatus, die den aktuellen Status des Buches in einem lesbaren Format ausgibt.
+
+4. Library-Klasse mit Nested und Inner Classes
+
+    Erstelle eine Klasse Library, die eine Sammlung von Büchern und einige Management-Methoden enthält.
+
+        Nested Class LibraryAddress:
+            Speichert Informationen über die Adresse der Bibliothek, z.B. street, city, zipCode.
+            Definiere eine Methode printAddress(), die die Adresse ausgibt.
+
+        Inner Class LibraryMember:
+            Repräsentiert ein Mitglied der Bibliothek und enthält Eigenschaften wie name und memberID.
+            Die Klasse hat Zugriff auf die Bücherliste der Bibliothek und enthält folgende Methoden:
+                checkoutBook(book: Book, dueDate: String): Ändert den status des Buches zu CheckedOut.
+                reserveBook(book: Book): Ändert den status des Buches zu Reserved.
+
+    Implementiere in der Library-Klasse Methoden, um:
+        Ein neues Buch hinzuzufügen (addBook(book: Book)).
+        Ein Buch nach Titel oder Autor zu durchsuchen.
+        Den aktuellen Status aller Bücher anzuzeigen.
+
+5. Implementiere die main()-Funktion
+
+    Erstelle eine Instanz der Library und füge verschiedene Bücher hinzu.
+    Füge eine Adresse der Bibliothek hinzu und gib diese aus.
+    Erstelle ein Mitglied und lasse es ein Buch ausleihen und ein anderes reservieren.
+    Gib den aktuellen Status der Bücher aus, um sicherzustellen, dass alle Methoden und Statusänderungen korrekt funktionieren.
