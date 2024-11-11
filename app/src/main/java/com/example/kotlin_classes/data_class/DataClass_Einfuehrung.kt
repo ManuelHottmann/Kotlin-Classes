@@ -1,4 +1,4 @@
-package com.example.kotlin_classes
+package com.example.kotlin_classes.data_class
 
     data class Book(
         var title: String,
