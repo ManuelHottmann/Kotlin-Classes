@@ -1,13 +1,13 @@
-package com.example.kotlin_classes.sealed_class
+package com.example.kotlin_classes.classes.sealed_class
 
 /**
  * Zahlungsmethoden für einen Onlineshop
  */
 sealed class PaymentMethod
 
-data class CreditCard(val cardNumber: String, val expiryDate: String):PaymentMethod()
+data class CreditCard(val cardNumber: String, val expiryDate: String): PaymentMethod()
 data class Paypal(val email:String): PaymentMethod()
-object CashOnDelivery:PaymentMethod()
+object CashOnDelivery: PaymentMethod()
 
 fun processPayment(paymentMethod: PaymentMethod){
     when (paymentMethod) {
