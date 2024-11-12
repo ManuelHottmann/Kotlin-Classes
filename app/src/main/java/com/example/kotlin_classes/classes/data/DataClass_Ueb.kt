@@ -1,4 +1,4 @@
-package com.example.kotlin_classes.data_class
+package com.example.kotlin_classes.classes.data
 
 data class Product(
     val name: String,
